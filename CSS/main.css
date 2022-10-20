@@ -1,0 +1,282 @@
+header {
+    position: relative;
+    background-image: url("./../img/events-heavenly-header.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(var(--mainColor), 0.5);
+    z-index: -1;
+}
+header .content {
+    text-align: center;
+}
+header .content h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+}
+header .content p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: -20rem;
+    z-index: 8;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+}
+#menu #menu-toggle {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+#menu #menu-body {
+    background-color: rgb(var(--secColor));
+    height: 100vh;
+    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#menu #menu-body ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+    margin-inline: 1rem;
+}
+#menu #menu-body ul li {
+    padding-left: 1.5rem;
+    display: flex;
+}
+#menu #menu-body ul li a {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.589);
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+#menu #menu-body ul li:hover a,
+#menu #menu-body #close-menu:hover {
+    color: #fff;
+}
+#menu #menu-body #close-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.589);
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 1rem 1rem 0 0;
+}
+@media (max-width: 350px) {
+    #menu {
+        left: -100%;
+    }
+    #menu #menu-body {
+        min-width: 100vw;
+    }
+    #menu #menu-body ul li {
+        text-align: center;
+        padding-left: 0;
+    }
+}
+#details {
+    padding-block: 6rem;
+}
+#details .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#details .container .accordion-item {
+    width: min(500px, 100%);
+}
+#details .accordion-item .head-singer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: rgb(var(--mainColor));
+    color: #fff;
+}
+#details .accordion-item .head-singer h2 {
+    font-size: 2rem;
+}
+#details .accordion-item p {
+    padding: 1rem;
+    display: none;
+}
+
+#duration {
+    background-image: url("./../img/invitation-2508607__340.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+    padding-block: 5rem;
+}
+#duration .container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    height: 100%;
+}
+#duration .container > div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--mainColor), 0.8);
+    padding-block: 5rem;
+    border-radius: 0.8rem;
+    border: 5px solid rgb(var(--mainColor));
+}
+#duration .container > div p {
+    color: #fff;
+    font-size: 2rem;
+}
+#duration .container > div p span {
+    font-weight: 900;
+}
+
+#contact {
+    padding-block: 5rem;
+}
+#contact .container > h2 {
+    font-size: 3rem;
+    color: rgb(var(--mainColor));
+}
+#contact .container > p {
+    font-size: 1.5rem;
+}
+
+#contact .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+#contact .container .contact-info {
+    width: 45%;
+}
+#contact .row h3 {
+    font-size: 1.5rem;
+}
+#contact .row .contact-info > p,
+#contact .row form > p {
+    line-height: 1.2;
+    margin-top: 1rem;
+}
+#contact .row ul {
+    list-style: none;
+    margin-top: 3rem;
+}
+#contact .row ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin-block: 1rem;
+}
+#contact .row ul li a {
+    text-decoration: none;
+}
+#contact .row .social {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+#contact .row .social li {
+    display: flex;
+    transition: 0.3s;
+    border: 1px solid rgb(var(--secColor));
+}
+#contact .row .social a {
+    transition: 0.3s;
+    padding: 1rem;
+}
+#contact .row .social li:hover {
+    background-color: rgb(var(--mainColor));
+    border-color: rgb(var(--mainColor));
+}
+#contact .row .social li:hover a {
+    color: #fff;
+}
+#contact form {
+    width: 45%;
+}
+#contact .contact-form {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#contact .contact-form input,
+textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1.2rem;
+    margin-block: 0.7rem;
+}
+#contact .contact-form input[type="submit"] {
+    width: fit-content;
+    background-color: rgb(var(--mainColor));
+    border: 1px solid rgb(var(--mainColor));
+    outline: none;
+    color: #fff;
+    opacity: 0.8;
+    cursor: pointer;
+    transform: 0.3s;
+}
+#contact .contact-form input[type="submit"]:hover {
+    opacity: 1;
+}
+#contact .contact-form input[type="submit"]:disabled {
+    opacity: 0.8 !important;
+}
+#contact form textarea {
+    min-height: 150px;
+}
+#validate-msg span {
+    font-weight: 800;
+    color: rgb(var(--mainColor));
+}
+
+@media (max-width: 1000px) {
+    #contact .container .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact .container .row .contact-info,
+    #contact .container .row form {
+        width: 100%;
+    }
+    #contact .container .row form {
+        margin-top: 5rem;
+    }
+}
